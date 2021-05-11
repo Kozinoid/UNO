@@ -1,0 +1,260 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7C49180-B7BE-44B8-9C31-BDE11397D067}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UNO</RootNamespace>
+    <AssemblyName>UNO</AssemblyName>
+    <ApplicationIcon>UNO_new.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalendarDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalendarDlg.Designer.cs">
+      <DependentUpon>CalendarDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameTittlesDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameTittlesDlg.Designer.cs">
+      <DependentUpon>GameTittlesDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewUNODlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewUNODlg.Designer.cs">
+      <DependentUpon>NewUNODlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OneGamePlayers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OneGamePlayers.Designer.cs">
+      <DependentUpon>OneGamePlayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OneGameResultsCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OneGameResultsCtrl.Designer.cs">
+      <DependentUpon>OneGameResultsCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OneRound.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OneRound.Designer.cs">
+      <DependentUpon>OneRound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerNameHeaderCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlayerNameHeaderCtrl.Designer.cs">
+      <DependentUpon>PlayerNameHeaderCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjFileStream.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OneGamePlayers.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OneGamePlayers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OneGameResultsCtrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OneGameResultsCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OneRound.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OneRound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerNameHeaderCtrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PlayerNameHeaderCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultCellCtrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ResultCellCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoundNumberCtrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RoundNumberCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoundResultCellCtrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RoundResultCellCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UNOOneGame.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UNOOneGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ResultCellCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ResultCellCtrl.Designer.cs">
+      <DependentUpon>ResultCellCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoundNumberCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RoundNumberCtrl.Designer.cs">
+      <DependentUpon>RoundNumberCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoundNumberDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoundNumberDlg.Designer.cs">
+      <DependentUpon>RoundNumberDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoundResultCellCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RoundResultCellCtrl.Designer.cs">
+      <DependentUpon>RoundResultCellCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatisticsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatisticsDlg.Designer.cs">
+      <DependentUpon>StatisticsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UNOEventArgsClasses.cs" />
+    <Compile Include="UNOFonts.cs" />
+    <Compile Include="UnoMenuItem.cs" />
+    <Compile Include="UNOOneGame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UNOOneGame.Designer.cs">
+      <DependentUpon>UNOOneGame.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphics\LefTopCorner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphics\PlayerName.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphics\ResultValue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphics\RightTopCorner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphics\RoundNumber.jpg" />
+    <EmbeddedResource Include="CalendarDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CalendarDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameTittlesDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GameTittlesDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphics\segoescb.ttf" />
+    <EmbeddedResource Include="NewUNODlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewUNODlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoundNumberDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RoundNumberDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatisticsDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StatisticsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphics\New_Game.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphics\New_Stage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Graphics\WinnerMark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UNO.ico" />
+    <Content Include="UNO_new.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
